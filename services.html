@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nos Services - BMS Ventouse</title>
+    <meta name="description" content="Services professionnels BMS Ventouse : ventousage, gardiennage zones sensibles, régie technique. Expertise Netflix, JO, productions audiovisuelles.">
+    
+    <!-- URLs Canoniques pour bmsventouse.fr -->
+    <link rel="canonical" href="https://www.bmsventouse.fr/services.html">
+    <meta property="og:url" content="https://www.bmsventouse.fr/services.html">
+    <meta property="og:title" content="Nos Services - BMS Ventouse">
+    <meta property="og:description" content="Services professionnels de logistique audiovisuelle et zones sensibles">
+    <meta property="og:type" content="website">
+    
+    <!-- Favicon complet -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="shortcut icon" href="favicon.ico">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background-color: #ffffff;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+            height: 70px;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-decoration: none;
+            color: #2c3e50;
+        }
+        
+        .logo img {
+            width: 40px;
+            height: 40px;
+            margin-right: 12px;
+        }
+        
+        .logo-text .bms {
+            color: #FF8C42;
+        }
+        
+        .logo-text .ventouse {
+            color: #2c3e50;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+        
+        .nav-link {
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: 500;
+            padding: 8px 16px;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link:hover, .nav-link.active {
+            background-color: #FF8C42;
+            color: white;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 150px 0 80px;
+            text-align: center;
+            margin-top: 70px;
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Sections */
+        .section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            font-size: 2.2rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+        
+        .section-subtitle {
+            font-size: 1.1rem;
+            text-align: center;
+            margin-bottom: 60px;
+            color: #666;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-bottom: 80px;
+        }
+        
+        .service-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            text-align: center;
+            border-left: 4px solid #FF8C42;
+            transition: transform 0.3s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: #FF8C42;
+        }
+        
+        .service-card h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+        
+        .service-card p {
+            margin-bottom: 20px;
+            color: #666;
+            line-height: 1.7;
+        }
+        
+        .service-card ul {
+            text-align: left;
+            list-style: none;
+            padding: 0;
+        }
+        
+        .service-card li {
+            margin-bottom: 10px;
+            color: #555;
+            position: relative;
+            padding-left: 25px;
+        }
+        
+        .service-card li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #FF8C42;
+            font-weight: bold;
+        }
+        
+        /* Included Services */
+        .included-section {
+            background: #f8f9fa;
+            padding: 80px 0;
+        }
+        
+        .included-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .included-card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+        }
+        
+        .included-badge {
+            background: #27ae60;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+        
+        .included-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #FF8C42;
+        }
+        
+        .included-card h4 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+        
+        .included-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        /* Zone Section */
+        .zone-section {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 80px 0;
+        }
+        
+        .zone-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .zone-card {
+            text-align: center;
+            padding: 30px 20px;
+        }
+        
+        .zone-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: #FF8C42;
+        }
+        
+        .zone-card h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        
+        .zone-card p {
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+        
+        .availability-cta {
+            text-align: center;
+            margin-top: 40px;
+        }
+        
+        .availability-btn {
+            background: #FF8C42;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .availability-btn:hover {
+            background: #e67e22;
+            transform: translateY(-2px);
+        }
+        
+        /* Method Section */
+        .method-section {
+            padding: 80px 0;
+            background: #f8f9fa;
+        }
+        
+        .method-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .method-step {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+        }
+        
+        .step-number {
+            background: #FF8C42;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 0 auto 20px;
+        }
+        
+        .method-step h4 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+        
+        .method-step p {
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            text-align: center;
+            padding: 80px 0;
+        }
+        
+        .cta-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        
+        .cta-subtitle {
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        
+        .btn-primary {
+            background-color: #FF8C42;
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background-color: #e67e22;
+            transform: translateY(-2px);
+        }
+        
+        .btn-secondary {
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+        
+        .btn-secondary:hover {
+            background-color: white;
+            color: #2c3e50;
+        }
+        
+        /* Footer */
+        .footer {
+            background-color: #2c3e50;
+            color: white;
+            padding: 60px 0 30px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-section h3 {
+            color: #FF8C42;
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+        
+        .footer-section p {
+            color: #95a5a6;
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+        
+        .footer-section a {
+            color: #95a5a6;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-section a:hover {
+            color: #FF8C42;
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid #34495e;
+            padding-top: 20px;
+            text-align: center;
+        }
+        
+        .footer-bottom p {
+            color: #95a5a6;
+            font-size: 0.9rem;
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 15px;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .hero {
+                padding: 120px 0 60px;
+            }
+            
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+                padding: 0 10px;
+            }
+            
+            .section {
+                padding: 60px 0;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .service-card {
+                padding: 30px 20px;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 100%;
+                max-width: 280px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="nav">
+                <a href="index.html" class="logo">
+                    <img src="android-chrome-192x192.png" alt="BMS Ventouse">
+                    <span class="logo-text">
+                        <span class="bms">BMS</span> <span class="ventouse">Ventouse</span>
+                    </span>
+                </a>
+                <nav class="nav-links">
+                    <a href="index.html" class="nav-link">Accueil</a>
+                    <a href="services.html" class="nav-link active">Services</a>
+                    <a href="realisations.html" class="nav-link">Références</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Nos Services : L'Expertise Technique au Service de Vos Productions</h1>
+                <p>De la sécurisation des périmètres à la gestion des contraintes spécifiques, nous prenons en charge l'intégralité des aspects logistiques pour vos productions audiovisuelles, sur Paris et toute la France.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Nos Interventions Techniques Spécialisées</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">🚧</div>
+                        <h3>Ventousage & Réglementation Urbaine</h3>
+                        <p>Maîtrise complète de la réglementation urbaine et des autorisations de tournage. Installation professionnelle de panneaux de signalisation, roulettage et affichage réglementaire.</p>
+                        <ul>
+                            <li>Délimitation précise des zones de travail</li>
+                            <li>Installation de signalétique réglementaire (cônes, barrières)</li>
+                            <li>Gestion des accès et des flux piétons/véhicules</li>
+                            <li>Expertise zones sensibles et secteurs réglementés</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">👮</div>
+                        <h3>Sécurité & Gardiennage de Plateaux</h3>
+                        <p>Protection active de votre équipement et surveillance professionnelle des plateaux de tournage. Agents spécialisés zones sensibles pour assurer la continuité de vos opérations.</p>
+                        <ul>
+                            <li>Surveillance des camions loges et véhicules techniques</li>
+                            <li>Sécurisation du matériel sensible et coûteux</li>
+                            <li>Contrôle d'accès au périmètre de tournage</li>
+                            <li>Intervention 24h/24 si nécessaire</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">🎬</div>
+                        <h3>Régie & Coordination Technique</h3>
+                        <p>Assistance technique complète avec personnel expérimenté pour la gestion des blocages de rue et coordination logistique. Expertise dans les secteurs difficiles.</p>
+                        <ul>
+                            <li>Coordination avec les autorités pour blocages temporaires</li>
+                            <li>Aide à la mise en place et déplacement du matériel lourd</li>
+                            <li>Gestion des flux et sécurité des passants</li>
+                            <li>Relations privilégiées avec acteurs locaux</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="included-section">
+            <div class="container">
+                <h2 class="section-title">Notre Accompagnement Technique Inclus</h2>
+                <p class="section-subtitle">Ces prestations sont intégrées à notre service principal pour une gestion complète et sans surprise de vos contraintes techniques.</p>
+                
+                <div class="included-grid">
+                    <div class="included-card">
+                        <div class="included-badge">INCLUS</div>
+                        <div class="included-icon">🔍</div>
+                        <h4>Repérage Technique et Conseil</h4>
+                        <p>Analyse détaillée des lieux, photos techniques et plans de stationnement optimisés pour votre logistique de production.</p>
+                    </div>
+                    
+                    <div class="included-card">
+                        <div class="included-badge">INCLUS</div>
+                        <div class="included-icon">📋</div>
+                        <h4>Gestion des Autorisations Administratives</h4>
+                        <p>Prise en charge complète des démarches auprès des mairies et préfectures pour les arrêtés de stationnement et autorisations spéciales.</p>
+                    </div>
+                    
+                    <div class="included-card">
+                        <div class="included-badge">INCLUS</div>
+                        <div class="included-icon">📢</div>
+                        <h4>Affichage et Information Riverains</h4>
+                        <p>Pose des arrêtés et panneaux réglementaires (B6/BK6A) pour informer les résidents et commerçants selon les normes en vigueur.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="zone-section">
+            <div class="container">
+                <h2 class="section-title">Notre Zone d'Intervention : Partout Où Vos Caméras Vous Mènent</h2>
+                
+                <div class="zone-grid">
+                    <div class="zone-card">
+                        <div class="zone-icon">🏛️</div>
+                        <h3>Paris & Île-de-France</h3>
+                        <p>Interventions quotidiennes dans Paris intra-muros, petite et grande couronne. Nous connaissons parfaitement les spécificités locales et les contraintes administratives.</p>
+                    </div>
+                    
+                    <div class="zone-card">
+                        <div class="zone-icon">🌍</div>
+                        <h3>Grandes Métropoles Régionales</h3>
+                        <p>Présence régulière à Strasbourg, Bordeaux, Lyon. Une équipe technique dédiée pour vos tournages en région avec la même expertise.</p>
+                    </div>
+                    
+                    <div class="zone-card">
+                        <div class="zone-icon">🇫🇷</div>
+                        <h3>Couverture Nationale</h3>
+                        <p>Nous nous déplaçons sur l'ensemble du territoire français pour vos projets d'envergure. Une logistique technique adaptée à chaque site.</p>
+                    </div>
+                </div>
+                
+                <div class="availability-cta">
+                    <a href="tel:0646005642" class="availability-btn">📞 Disponibilité 24h/24 - 7j/7 : Nous sommes là quand vous tournez</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="method-section">
+            <div class="container">
+                <h2 class="section-title">Notre Méthode : Efficacité et Transparence Technique</h2>
+                
+                <div class="method-grid">
+                    <div class="method-step">
+                        <div class="step-number">1</div>
+                        <h4>Analyse Technique Préalable</h4>
+                        <p>Étude détaillée de vos besoins et contraintes spécifiques au projet, avec analyse des zones sensibles.</p>
+                    </div>
+                    
+                    <div class="method-step">
+                        <div class="step-number">2</div>
+                        <h4>Proposition Opérationnelle</h4>
+                        <p>Plan technique détaillé des actions et ressources nécessaires, adapté aux contraintes du site.</p>
+                    </div>
+                    
+                    <div class="method-step">
+                        <div class="step-number">3</div>
+                        <h4>Démarches Administratives</h4>
+                        <p>Obtention des autorisations et mise en place de l'affichage réglementaire selon les normes.</p>
+                    </div>
+                    
+                    <div class="method-step">
+                        <div class="step-number">4</div>
+                        <h4>Mise en Place Terrain</h4>
+                        <p>Déploiement des équipes techniques et du matériel spécialisé sur site selon le planning établi.</p>
+                    </div>
+                    
+                    <div class="method-step">
+                        <div class="step-number">5</div>
+                        <h4>Suivi et Ajustements</h4>
+                        <p>Présence continue et adaptation technique aux évolutions du tournage et aux imprévus.</p>
+                    </div>
+                    
+                    <div class="method-step">
+                        <div class="step-number">6</div>
+                        <h4>Clôture et Restitution</h4>
+                        <p>Démontage professionnel et remise en état des lieux selon les standards requis.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container">
+                <h2 class="cta-title">Un Défi Logistique Technique à Relever ?</h2>
+                <p class="cta-subtitle">Contactez notre équipe technique pour une étude personnalisée de vos besoins en logistique audiovisuelle et gestion des zones sensibles.</p>
+                <div class="cta-buttons">
+                    <a href="tel:0646005642" class="btn btn-primary">Étude gratuite : 06 46 00 56 42</a>
+                    <a href="realisations.html" class="btn btn-secondary">Voir nos Références</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Contact Technique</h3>
+                    <p><strong>06 46 00 56 42</strong></p>
+                    <p><strong>06 52 47 37 23</strong></p>
+                    <p><a href="mailto:bms.ventouse@gmail.com">bms.ventouse@gmail.com</a></p>
+                </div>
+                <div class="footer-section">
+                    <h3>Nos Prestations</h3>
+                    <p>Ventousage professionnel</p>
+                    <p>Sécurité plateaux zones sensibles</p>
+                    <p>Régie technique</p>
+                    <p>Solution intégrée</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Zone d'Intervention</h3>
+                    <p><strong>FRANCE ENTIÈRE</strong></p>
+                    <p>Paris - Tous arrondissements</p>
+                    <p>Lyon - Métropole</p>
+                    <p>Bordeaux - Gironde</p>
+                    <p>Strasbourg - Bas-Rhin</p>
+                    <p>Seine-Saint-Denis (93)</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Entreprise</h3>
+                    <p><a href="realisations.html">Nos Références</a></p>
+                    <p><strong>SIRET:</strong> 93198138500015</p>
+                    <p><strong>RCS</strong> Bobigny</p>
+                    <p><a href="mentions.html">Mentions Légales</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 BMS Ventouse. Tous droits réservés. | Logistique technique audiovisuelle & zones sensibles</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+

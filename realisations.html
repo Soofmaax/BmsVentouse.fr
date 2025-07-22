@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nos Références - BMS Ventouse</title>
+    <meta name="description" content="Références BMS Ventouse : Netflix En Place, Flamme Olympique JO, Beat the Street. Expertise zones sensibles productions audiovisuelles.">
+    
+    <!-- URLs Canoniques pour bmsventouse.fr -->
+    <link rel="canonical" href="https://www.bmsventouse.fr/realisations.html">
+    <meta property="og:url" content="https://www.bmsventouse.fr/realisations.html">
+    <meta property="og:title" content="Nos Références - BMS Ventouse">
+    <meta property="og:description" content="Découvrez nos références prestigieuses : Netflix, JO, productions audiovisuelles">
+    <meta property="og:type" content="website">
+    
+    <!-- Favicon complet -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="shortcut icon" href="favicon.ico">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background-color: #ffffff;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+            height: 70px;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-decoration: none;
+            color: #2c3e50;
+        }
+        
+        .logo img {
+            width: 40px;
+            height: 40px;
+            margin-right: 12px;
+        }
+        
+        .logo-text .bms {
+            color: #FF8C42;
+        }
+        
+        .logo-text .ventouse {
+            color: #2c3e50;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+        
+        .nav-link {
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: 500;
+            padding: 8px 16px;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link:hover, .nav-link.active {
+            background-color: #FF8C42;
+            color: white;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 150px 0 80px;
+            text-align: center;
+            margin-top: 70px;
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Strengths Section */
+        .strengths-section {
+            padding: 80px 0;
+            background: #f8f9fa;
+        }
+        
+        .strengths-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+        }
+        
+        .strength-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .strength-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .strength-icon {
+            width: 80px;
+            height: 80px;
+            background: #FF8C42;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 2rem;
+            color: white;
+        }
+        
+        .strength-card h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+        
+        .strength-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        /* Projects Section */
+        .projects-section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            font-size: 2.2rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+        
+        .section-subtitle {
+            font-size: 1.1rem;
+            text-align: center;
+            margin-bottom: 60px;
+            color: #666;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+        }
+        
+        .project-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .project-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .project-content {
+            padding: 30px;
+        }
+        
+        .project-badge {
+            background: #FF8C42;
+            color: white;
+            padding: 6px 12px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+        
+        .project-card h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        .project-location {
+            color: #FF8C42;
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+        
+        .project-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        /* Testimonials Section */
+        .testimonials-section {
+            padding: 80px 0;
+            background: #f8f9fa;
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+        
+        .testimonial-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            position: relative;
+        }
+        
+        .quote-icon {
+            font-size: 3rem;
+            color: #FF8C42;
+            opacity: 0.3;
+            position: absolute;
+            top: 20px;
+            left: 30px;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            color: #555;
+            margin-bottom: 20px;
+            line-height: 1.7;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .testimonial-author {
+            font-weight: 600;
+            color: #2c3e50;
+        }
+        
+        .testimonial-role {
+            color: #FF8C42;
+            font-size: 0.9rem;
+        }
+        
+        /* Gallery Section */
+        .gallery-section {
+            padding: 80px 0;
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            aspect-ratio: 4/3;
+        }
+        
+        .gallery-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-item:hover .gallery-image {
+            transform: scale(1.05);
+        }
+        
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            color: white;
+            padding: 20px;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-item:hover .gallery-overlay {
+            transform: translateY(0);
+        }
+        
+        .gallery-title {
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        
+        .gallery-description {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            text-align: center;
+            padding: 80px 0;
+        }
+        
+        .cta-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        
+        .cta-subtitle {
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        
+        .btn-primary {
+            background-color: #FF8C42;
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background-color: #e67e22;
+            transform: translateY(-2px);
+        }
+        
+        /* Footer */
+        .footer {
+            background-color: #2c3e50;
+            color: white;
+            padding: 60px 0 30px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-section h3 {
+            color: #FF8C42;
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+        
+        .footer-section p {
+            color: #95a5a6;
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+        
+        .footer-section a {
+            color: #95a5a6;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-section a:hover {
+            color: #FF8C42;
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid #34495e;
+            padding-top: 20px;
+            text-align: center;
+        }
+        
+        .footer-bottom p {
+            color: #95a5a6;
+            font-size: 0.9rem;
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 15px;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .hero {
+                padding: 120px 0 60px;
+            }
+            
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+                padding: 0 10px;
+            }
+            
+            .projects-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="nav">
+                <a href="index.html" class="logo">
+                    <img src="android-chrome-192x192.png" alt="BMS Ventouse">
+                    <span class="logo-text">
+                        <span class="bms">BMS</span> <span class="ventouse">Ventouse</span>
+                    </span>
+                </a>
+                <nav class="nav-links">
+                    <a href="index.html" class="nav-link">Accueil</a>
+                    <a href="services.html" class="nav-link">Services</a>
+                    <a href="realisations.html" class="nav-link active">Références</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Nos Références : La Preuve par l'Action Technique</h1>
+                <p>Chaque production est un défi logistique unique. Découvrez nos interventions techniques où notre expertise zones sensibles a fait la différence, sur le terrain, pour des productions exigeantes.</p>
+            </div>
+        </section>
+
+        <section class="strengths-section">
+            <div class="container">
+                <div class="strengths-grid">
+                    <div class="strength-card">
+                        <div class="strength-icon">🎬</div>
+                        <h3>Expertise Confirmée</h3>
+                        <p>Des années d'expérience technique à accompagner les plus grandes productions, garantissant une maîtrise parfaite des enjeux zones sensibles.</p>
+                    </div>
+                    
+                    <div class="strength-card">
+                        <div class="strength-icon">⏱️</div>
+                        <h3>Réactivité Optimale</h3>
+                        <p>Nous comprenons les impératifs de planning audiovisuel. Notre agilité technique assure des interventions rapides et efficaces.</p>
+                    </div>
+                    
+                    <div class="strength-card">
+                        <div class="strength-icon">✅</div>
+                        <h3>Solutions Adaptées</h3>
+                        <p>Chaque site, chaque contrainte technique est analysée pour une solution de ventousage sur mesure et conforme aux normes.</p>
+                    </div>
+                    
+                    <div class="strength-card">
+                        <div class="strength-icon">🤝</div>
+                        <h3>Partenariat Durable</h3>
+                        <p>Nous bâtissons des relations de confiance technique, basées sur la transparence et l'efficacité, pour des collaborations pérennes.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="projects-section">
+            <div class="container">
+                <h2 class="section-title">Nos Interventions Techniques de Référence</h2>
+                <p class="section-subtitle">Productions prestigieuses où notre expertise technique et notre maîtrise des zones sensibles ont été déterminantes.</p>
+                
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <img src="images/1000014853.jpg" alt="Série Netflix En Place" class="project-image">
+                        <div class="project-content">
+                            <div class="project-badge">NETFLIX</div>
+                            <h3>Série "En Place" - Saison 2</h3>
+                            <div class="project-location">Paris & Banlieue - Zones Sensibles</div>
+                            <p>Gestion technique complexe des périmètres de sécurité et coordination logistique pour cette production Netflix. Intervention spécialisée en zones sensibles avec gestion des contraintes administratives spécifiques.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <img src="images/1000014858.jpg" alt="Flamme Olympique JO" class="project-image">
+                        <div class="project-content">
+                            <div class="project-badge">JO 2024</div>
+                            <h3>La Flamme Olympique</h3>
+                            <div class="project-location">Événement Officiel JO - Sécurité Maximale</div>
+                            <p>Participation technique à l'événement officiel de la Flamme Olympique. Gestion de la sécurisation des zones et coordination avec les forces de l'ordre pour cet événement d'envergure internationale.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <img src="images/1000014859.jpg" alt="Beat the Street" class="project-image">
+                        <div class="project-content">
+                            <div class="project-badge">PRODUCTION</div>
+                            <h3>Beat the Street</h3>
+                            <div class="project-location">Production Audiovisuelle - Tournage Urbain</div>
+                            <p>Assistance technique complète pour cette production audiovisuelle. Ventousage professionnel, sécurisation du matériel et gestion des flux en environnement urbain dense.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials-section">
+            <div class="container">
+                <h2 class="section-title">Ils Nous Font Confiance : Retours du Terrain Technique</h2>
+                
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="quote-icon">"</div>
+                        <p class="testimonial-text">Sur une production de cette envergure technique, la logistique stationnement et sécurisation est critique. L'équipe BMS Ventouse a géré les imprévus zones sensibles avec un professionnalisme rare. Un vrai soulagement technique pour la régie.</p>
+                        <div class="testimonial-author">Sophie L.</div>
+                        <div class="testimonial-role">Directrice de Production</div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="quote-icon">"</div>
+                        <p class="testimonial-text">Nous avions des contraintes techniques de temps et de discrétion en plein Paris zones sensibles. Leur intervention a été rapide, efficace et sans accroc technique. Leur connaissance du terrain est un atout majeur.</p>
+                        <div class="testimonial-author">Marc D.</div>
+                        <div class="testimonial-role">Régisseur Général</div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="quote-icon">"</div>
+                        <p class="testimonial-text">Les démarches administratives zones sensibles sont souvent un casse-tête technique. BMS Ventouse a pris en charge toutes les autorisations, nous permettant de nous concentrer sur le créatif. Un gain de temps précieux.</p>
+                        <div class="testimonial-author">Claire R.</div>
+                        <div class="testimonial-role">Productrice Exécutive</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="gallery-section">
+            <div class="container">
+                <h2 class="section-title">Galerie Technique : Nos Interventions en Images</h2>
+                
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="images/1000014861.jpg" alt="Intervention technique BMS" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <div class="gallery-title">Sécurisation Plateau</div>
+                            <div class="gallery-description">Mise en place technique des périmètres de sécurité</div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <img src="images/1000014959.jpg" alt="Équipe BMS en action" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <div class="gallery-title">Équipe Technique</div>
+                            <div class="gallery-description">Nos professionnels zones sensibles en intervention</div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <img src="images/1000014960.jpg" alt="Matériel technique BMS" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <div class="gallery-title">Matériel Spécialisé</div>
+                            <div class="gallery-description">Équipements techniques pour zones sensibles</div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <img src="images/1000014962.jpg" alt="Signalisation urbaine" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <div class="gallery-title">Signalisation Urbaine</div>
+                            <div class="gallery-description">Ventousage professionnel et réglementation</div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <img src="images/1000014963.jpg" alt="Coordination technique" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <div class="gallery-title">Coordination Technique</div>
+                            <div class="gallery-description">Gestion des flux et sécurité</div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <img src="images/1000014964.jpg" alt="Intervention zones sensibles" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <div class="gallery-title">Zones Sensibles</div>
+                            <div class="gallery-description">Expertise spécialisée secteurs difficiles</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container">
+                <h2 class="cta-title">Votre Prochain Défi Logistique Technique ?</h2>
+                <p class="cta-subtitle">Chaque production est unique. Contactez-nous pour une étude technique personnalisée de vos besoins et assurez la fluidité de votre production sur le terrain.</p>
+                <a href="tel:0646005642" class="btn btn-primary">Démarrer Votre Projet Technique</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Contact Technique</h3>
+                    <p><strong>06 46 00 56 42</strong></p>
+                    <p><strong>06 52 47 37 23</strong></p>
+                    <p><a href="mailto:bms.ventouse@gmail.com">bms.ventouse@gmail.com</a></p>
+                </div>
+                <div class="footer-section">
+                    <h3>Nos Références</h3>
+                    <p><strong>Netflix "En Place" S2</strong></p>
+                    <p><strong>Flamme Olympique JO</strong></p>
+                    <p><strong>Beat the Street</strong></p>
+                    <p>Productions audiovisuelles</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Zone d'Intervention</h3>
+                    <p><strong>FRANCE ENTIÈRE</strong></p>
+                    <p>Paris - Tous arrondissements</p>
+                    <p>Lyon - Métropole</p>
+                    <p>Bordeaux - Gironde</p>
+                    <p>Strasbourg - Bas-Rhin</p>
+                    <p>Seine-Saint-Denis (93)</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Entreprise</h3>
+                    <p><a href="services.html">Nos Services</a></p>
+                    <p><strong>SIRET:</strong> 93198138500015</p>
+                    <p><strong>RCS</strong> Bobigny</p>
+                    <p><a href="mentions.html">Mentions Légales</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 BMS Ventouse. Tous droits réservés. | Logistique technique audiovisuelle & zones sensibles</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
