@@ -8,3 +8,5 @@
 /services     /#services      301
 /contact      /#contact       301
 /references   /#references    301
+# Redirection des pages 404 vers l'accueil
+/*    /    404
