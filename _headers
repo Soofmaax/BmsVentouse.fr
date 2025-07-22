@@ -10,8 +10,8 @@
   Permissions-Policy: camera=(), microphone=(), geolocation=(), usb=(), gyroscope=(), magnetometer=(), accelerometer=(), fullscreen=(self)
   Content-Security-Policy: 
     default-src 'self'; 
-    script-src 'self' 'unsafe-inline'; 
-    style-src 'self' 'unsafe-inline'; 
+    script-src 'self'; 
+    style-src 'self'; 
     img-src 'self' data: https:; 
     font-src 'self' https:; 
     object-src 'none'; 
