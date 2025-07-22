@@ -1,15 +1,33 @@
-/*
+# 📄 _headers – Configuration Netlify pour site vitrine statique (2025+)
+# Fichier à placer à la racine de ton dossier de build (ex: dist/, public/, ou le root du projet selon ton framework)
+
+# 🔒 Sécurité globale
+/* 
   X-Frame-Options: DENY
   X-Content-Type-Options: nosniff
-  X-XSS-Protection: 1; mode=block
+  X-XSS-Protection: 0
   Referrer-Policy: strict-origin-when-cross-origin
-  Permissions-Policy: camera=(), microphone=(), geolocation=()
-  
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), usb=(), gyroscope=(), magnetometer=(), accelerometer=(), fullscreen=(self)
+  Content-Security-Policy: 
+    default-src 'self'; 
+    script-src 'self' 'unsafe-inline'; 
+    style-src 'self' 'unsafe-inline'; 
+    img-src 'self' data: https:; 
+    font-src 'self' https:; 
+    object-src 'none'; 
+    frame-ancestors 'none'; 
+    base-uri 'self'
+
+# ⚡ Cache optimisé pour les assets statiques versionnés
 /images/*
   Cache-Control: public, max-age=31536000, immutable
-  
+
 /*.css
   Cache-Control: public, max-age=31536000, immutable
-  
+
 /*.js
   Cache-Control: public, max-age=31536000, immutable
+
+# 🔁 HTML non mis en cache pour éviter les soucis de mise à jour
+/index.html
+  Cache-Control: no-cache
