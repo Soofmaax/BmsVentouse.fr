@@ -1,6 +1,6 @@
 /* ==========================================================================
    Feuille de style pour BMS Ventouse
-   Version: 2.1 (Améliorations : Typographie Fluide & Accessibilité)
+   Version: 3.0 (Version Finale : Performance & Stabilité)
    ========================================================================== */
 
 /* ==========================================================================
@@ -80,7 +80,6 @@ a:hover {
 }
 
 .section-title {
-  /* AMÉLIORATION : Typographie fluide */
   font-size: clamp(2rem, 5vw + 1rem, 2.5rem);
   font-weight: 800;
   text-align: center;
@@ -155,7 +154,7 @@ a:hover {
 }
 
 .hamburger {
-  display: none; /* Géré en responsive */
+  display: none;
   flex-direction: column;
   cursor: pointer;
   gap: 5px;
@@ -290,7 +289,7 @@ a:hover {
 .hero {
   color: var(--color-light);
   text-align: center;
-  background-image: url('images/bms-ventouse-accueil-signaletique-rue-paris.jpg');
+  background-image: url('/images/bms-ventouse-accueil-signaletique-rue-paris.jpg');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -298,12 +297,12 @@ a:hover {
 }
 
 .hero-overlay {
+  background-color: rgba(44, 62, 80, 0.6);
   padding: 150px 0 80px;
   margin-top: var(--header-height);
 }
 
 .hero h1 {
-  /* AMÉLIORATION : Typographie fluide */
   font-size: clamp(2.2rem, 5vw + 1rem, 3rem);
   font-weight: 800;
   margin-bottom: 1.5rem;
@@ -384,7 +383,6 @@ a:hover {
   padding-bottom: 1.5rem;
 }
 
-/* --- NOUVEAUX STYLES POUR LA PAGE RÉALISATIONS --- */
 .case-study {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -409,7 +407,6 @@ a:hover {
   margin-bottom: 1.5rem;
 }
 .case-study-content h3 {
-  /* AMÉLIORATION : Typographie fluide */
   font-size: clamp(1.5rem, 4vw + 0.5rem, 2rem);
   font-weight: 800;
   margin-bottom: 1rem;
@@ -460,18 +457,69 @@ a:hover {
   color: var(--color-primary);
   margin-bottom: 1rem;
 }
-/* --- FIN DES NOUVEAUX STYLES --- */
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25D366;
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+  z-index: 100;
+  transition: transform 0.3s ease;
+}
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
 
 
 /* ==========================================================================
-   6. RESPONSIVE DESIGN
+   6. ACCESSIBILITÉ
+   ========================================================================== */
+
+:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 3px;
+  border-radius: var(--border-radius-base);
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+
+/* ==========================================================================
+   7. OPTIMISATIONS DE PERFORMANCE
+   ========================================================================== */
+
+/*
+  Indique au navigateur que les propriétés 'opacity' et 'transform'
+  vont probablement changer. Le navigateur peut ainsi optimiser le rendu
+  en plaçant ces éléments sur leur propre couche graphique (GPU).
+*/
+.hero h1,
+.hero p,
+.hero-buttons .btn,
+[data-aos] {
+  will-change: opacity, transform;
+}
+
+
+/* ==========================================================================
+   8. RESPONSIVE DESIGN
    ========================================================================== */
 
 @media (max-width: 768px) {
   .header .nav-links { display: none; }
   .header .hamburger { display: flex; }
 
-  /* La typographie est maintenant fluide, moins de code nécessaire ici */
   .hero p { font-size: 1.1rem; }
 
   .footer-content, .footer-links { grid-template-columns: 1fr; }
@@ -484,20 +532,4 @@ a:hover {
   .case-study.reverse .case-study-content {
     grid-column: 1;
   }
-}
-
-/* ==========================================================================
-   7. ACCESSIBILITÉ (NOUVELLE SECTION)
-   ========================================================================== */
-
-/* Amélioration de l'indicateur de focus pour la navigation au clavier */
-:focus-visible {
-  outline: 3px solid var(--color-primary);
-  outline-offset: 3px;
-  border-radius: var(--border-radius-base);
-}
-
-/* Pour éviter d'afficher le style de focus lors d'un clic de souris */
-:focus:not(:focus-visible) {
-  outline: none;
 }
