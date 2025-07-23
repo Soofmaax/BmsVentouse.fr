@@ -1,55 +1,13 @@
 {
-  // ==========================================================================
-  // METADONNÉES DU PROJET
-  // ==========================================================================
-  // Ces informations identifient le projet. Elles sont utiles pour la gestion
-  // des paquets et pour les outils d'automatisation.
-
   "name": "bmsventouse",
-  // Le nom du projet, généralement en minuscules et sans espaces.
-  // C'est l'identifiant unique si vous deviez le publier sur un registre comme npm.
-
   "version": "1.0.0",
-  // La version actuelle du projet, suivant le versionnage sémantique (Majeure.Mineure.Patch).
-  // On l'incrémente à chaque nouvelle version significative.
-
   "description": "Site vitrine statique pour BMS Ventouse, construit avec Eleventy.",
-  // Une courte description qui résume l'objectif du projet.
-  // Utile pour la documentation et la recherche.
-
-
-  // ==========================================================================
-  // SCRIPTS D'AUTOMATISATION
-  // ==========================================================================
-  // Cette section définit des commandes personnalisées pour automatiser des tâches
-  // courantes. On les exécute avec `npm run <nom_du_script>`.
-
   "scripts": {
     "start": "eleventy --serve --quiet",
-    // La commande `npm start` est une convention pour lancer le projet en mode développement.
-    // `eleventy --serve` démarre un serveur local qui se rafraîchit automatiquement
-    // à chaque modification de fichier. L'option `--quiet` nettoie la sortie du terminal.
-
     "build": "eleventy"
-    // La commande `npm run build` est utilisée pour générer la version de production du site.
-    // `eleventy` seul exécute le processus de construction une fois et place les fichiers
-    // finaux dans le dossier de sortie (par défaut `_site/`). C'est cette commande
-    // que les services comme Netlify utiliseront pour déployer le site.
   },
-
-
-  // ==========================================================================
-  // DÉPENDANCES DE DÉVELOPPEMENT
-  // ==========================================================================
-  // `devDependencies` liste les paquets qui sont nécessaires uniquement pour
-  // le développement et la construction du projet (ex: compilateurs, bundlers,
-  // serveurs de test). Ils ne sont pas inclus dans le site final.
-
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.1"
-    // `@11ty/eleventy` est le paquet pour le générateur de site statique Eleventy.
-    // Le `^` avant la version indique que npm peut installer des mises à jour mineures
-    // et des patchs automatiquement, mais pas de nouvelles versions majeures qui
-    // pourraient casser le projet. C'est la dépendance principale pour construire le site.
+    "@11ty/eleventy": "^2.0.1",
+    "@11ty/eleventy-plugin-sitemap": "^1.0.0"
   }
 }
