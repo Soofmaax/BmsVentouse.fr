@@ -1,63 +1,85 @@
 /**
  * ==========================================================================
  * Script principal pour BMS Ventouse
- * Version: 1.0
- * Description: Gère les interactions sur le site, comme l'accordéon de la FAQ.
  * ==========================================================================
+ * Gère les interactions du site comme le menu hamburger et l'accordéon FAQ.
+ * Le code est structuré en modules pour une meilleure lisibilité et maintenance.
  */
 
 // 'DOMContentLoaded' s'assure que le script ne s'exécute que lorsque
 // la totalité de la page HTML est chargée et prête. C'est une bonne pratique
-// pour éviter les erreurs.
+// pour éviter les erreurs JavaScript.
 document.addEventListener('DOMContentLoaded', () => {
+
+  /**
+   * --------------------------------------------------------------------------
+   * MODULE: MENU HAMBURGER (pour la navigation mobile)
+   * --------------------------------------------------------------------------
+   * Gère l'ouverture et la fermeture du menu de navigation sur les petits écrans.
+   */
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('navLinks');
+
+  // On vérifie que les éléments du menu existent avant d'ajouter des écouteurs.
+  if (hamburger && navLinks) {
+    hamburger.addEventListener('click', () => {
+      // Ajoute ou retire la classe 'active' sur le bouton et le menu
+      // pour déclencher les animations et l'affichage en CSS.
+      hamburger.classList.toggle('active');
+      navLinks.classList.toggle('active');
+      
+      // Met à jour l'attribut aria-expanded pour l'accessibilité.
+      // C'est crucial pour les lecteurs d'écran.
+      const isExpanded = hamburger.getAttribute('aria-expanded') === 'true';
+      hamburger.setAttribute('aria-expanded', !isExpanded);
+    });
+  }
+
 
   /**
    * --------------------------------------------------------------------------
    * MODULE: ACCORDÉON POUR LA FAQ
    * --------------------------------------------------------------------------
    * Rend les questions de la FAQ cliquables pour afficher/masquer les réponses.
-   * Un seul élément peut être ouvert à la fois.
    */
-  
-  // 1. On sélectionne tous les éléments qui servent de "bouton" pour les questions.
-  const faqQuestions = document.querySelectorAll('.faq-question');
+  const faqItems = document.querySelectorAll('.faq-item');
 
-  // 2. On vérifie s'il y a bien des questions sur la page avant de continuer.
-  if (faqQuestions.length > 0) {
-    
-    // 3. On ajoute un "écouteur d'événement" (un mouchard) sur chaque question.
-    //    Ce mouchard attend un clic de l'utilisateur.
-    faqQuestions.forEach(questionButton => {
-      questionButton.addEventListener('click', () => {
-        
-        // 4. Quand un clic est détecté, on récupère l'élément parent '.faq-item'
-        //    qui contient à la fois la question et la réponse.
-        const currentFaqItem = questionButton.parentElement;
-        
-        // 5. On vérifie si la question cliquée est déjà ouverte.
-        //    On utilise une classe 'is-open' pour savoir l'état.
-        const isAlreadyOpen = currentFaqItem.classList.contains('is-open');
+  // On vérifie qu'il y a bien des éléments de FAQ sur la page.
+  if (faqItems.length > 0) {
+    faqItems.forEach(item => {
+      const question = item.querySelector('.faq-question');
+      const answer = item.querySelector('.faq-answer');
 
-        // 6. AVANT D'OUVRIR, on ferme toutes les autres réponses qui pourraient être ouvertes.
-        //    C'est ce qui garantit qu'une seule réponse est visible à la fois.
-        document.querySelectorAll('.faq-item').forEach(item => {
-          item.classList.remove('is-open'); // On retire la classe 'is-open'
-          // On cache aussi la réponse directement pour plus de robustesse
-          item.querySelector('.faq-answer').style.maxHeight = null; 
+      // On s'assure que chaque item a bien une question et une réponse.
+      if (question && answer) {
+        question.addEventListener('click', () => {
+          const isOpen = item.classList.contains('is-open');
+
+          // On ferme d'abord tous les autres items pour n'en avoir qu'un d'ouvert.
+          faqItems.forEach(otherItem => {
+            if (otherItem !== item) { // On ne ferme pas celui sur lequel on vient de cliquer
+              otherItem.classList.remove('is-open');
+              otherItem.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+              otherItem.querySelector('.faq-answer').style.maxHeight = null; // Réinitialise la hauteur
+            }
+          });
+
+          // Ensuite, on gère l'ouverture/fermeture de l'item cliqué.
+          if (isOpen) {
+            // Si c'était déjà ouvert, on le ferme.
+            item.classList.remove('is-open');
+            question.setAttribute('aria-expanded', 'false');
+            answer.style.maxHeight = null;
+          } else {
+            // Sinon, on l'ouvre.
+            item.classList.add('is-open');
+            question.setAttribute('aria-expanded', 'true');
+            // On calcule la hauteur nécessaire pour l'animation de déploiement.
+            answer.style.maxHeight = answer.scrollHeight + 'px';
+          }
         });
-
-        // 7. Si la question cliquée n'était PAS déjà ouverte, on l'ouvre.
-        if (!isAlreadyOpen) {
-          currentFaqItem.classList.add('is-open'); // On ajoute la classe
-          const answer = currentFaqItem.querySelector('.faq-answer');
-          // On définit la hauteur maximale pour créer une animation de déploiement CSS
-          answer.style.maxHeight = answer.scrollHeight + 'px';
-        }
-        // Si elle était déjà ouverte, le code ci-dessus l'aura fermée, donc on ne fait rien de plus.
-      });
+      }
     });
   }
-  
-  // Vous pourrez ajouter d'autres modules ici (ex: menu mobile, animations...)
 
 });
