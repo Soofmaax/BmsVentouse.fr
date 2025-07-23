@@ -7,34 +7,12 @@ layout: layout.html
 ---
 
 <!-- ==========================================================================
-   EN-TÊTE
+   EN-TÊTE (Injecté depuis _includes/header.html)
    ========================================================================== -->
-<header class="header">
-    <div class="container">
-        <div class="nav">
-            <a href="/" class="logo" aria-label="Retour à l'accueil de BMS Ventouse">
-                <img src="/android-chrome-192x192.png" alt="Logo BMS Ventouse">
-                <span class="logo-text">
-                    <span class="bms">BMS</span> <span class="ventouse">Ventouse</span>
-                </span>
-            </a>
-            <nav id="navLinks" class="nav-links">
-                <a href="/" class="nav-link active">Accueil</a>
-                <a href="/services.html" class="nav-link">Services</a>
-                <a href="/realisations.html" class="nav-link">Références</a>
-                <a href="/contact.html" class="nav-link">Contact</a>
-            </nav>
-            <div class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </div>
-</header>
+{% include "header.html" %}
 
 <!-- ==========================================================================
-   CONTENU PRINCIPAL
+   CONTENU PRINCIPAL DE LA PAGE D'ACCUEIL
    ========================================================================== -->
 <main>
 
@@ -89,7 +67,6 @@ layout: layout.html
                     <p style="font-style: italic; font-size: 1.2rem; margin-bottom: 20px;">"L'équipe de BMS a été d'une efficacité redoutable sur le tournage de 'En Place'. Leur connaissance des zones sensibles est un atout inestimable."</p>
                     <footer style="font-weight: 700;">— Jean Dupont, <span style="color: #FF8C42;">Directeur de Production (Netflix)</span></footer>
                 </div>
-                <!-- Vous pourrez ajouter un deuxième témoignage ici -->
             </div>
         </div>
     </section>
@@ -100,7 +77,6 @@ layout: layout.html
             <h2 class="section-title" data-aos="fade-up">Des Projets d'Envergure</h2>
             <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Nous sommes fiers d'avoir collaboré avec les plus grands noms de l'industrie sur des projets exigeants.</p>
             <div class="references-logos" style="display: flex; justify-content: center; align-items: center; gap: 40px; flex-wrap: wrap; margin-top: 40px;" data-aos="fade-up">
-                <!-- Remplacez par les vrais logos si vous les avez -->
                 <span class="badge badge-netflix" style="font-size: 1.5rem;">NETFLIX</span>
                 <span class="badge badge-jo" style="font-size: 1.5rem;">JO 2024</span>
                 <span class="badge" style="font-size: 1.5rem;">Conseil Régional</span>
@@ -125,55 +101,6 @@ layout: layout.html
 </main>
 
 <!-- ==========================================================================
-   PIED DE PAGE
+   PIED DE PAGE (Injecté depuis _includes/footer.html)
    ========================================================================== -->
-<footer class="footer">
-    <div class="footer-main">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <div class="footer-logo">
-                        <img src="/android-chrome-192x192.png" alt="BMS Ventouse" class="footer-logo-img">
-                        <div class="footer-brand-text">
-                            <span class="footer-bms">BMS</span><span class="footer-ventouse">Ventouse</span>
-                        </div>
-                    </div>
-                    <p class="footer-description">Votre partenaire logistique et sécurité pour des productions sereines et efficaces, partout en France.</p>
-                </div>
-                <div class="footer-links">
-                    <div class="footer-column">
-                        <h4>Navigation</h4>
-                        <ul>
-                            <li><a href="/">Accueil</a></li>
-                            <li><a href="/services.html">Services</a></li>
-                            <li><a href="/realisations.html">Références</a></li>
-                            <li><a href="/contact.html">Contact</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-column">
-                        <h4>Contact Direct</h4>
-                        <ul>
-                            <li><a href="tel:0646005642"><i class="fas fa-phone-alt"></i> 06 46 00 56 42 (Bena)</a></li>
-                            <li><a href="tel:0652473723"><i class="fas fa-mobile-alt"></i> 06 52 47 37 23 (Malik)</a></li>
-                            <li><a href="mailto:bms.ventouse@gmail.com"><i class="fas fa-envelope"></i> bms.ventouse@gmail.com</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-column">
-                        <h4>Légal</h4>
-                        <ul>
-                            <li><a href="/mentions.html">Mentions Légales</a></li>
-                            <li>SIRET: 93198138500015</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="footer-bottom">
-        <div class="container">
-            <div class="footer-bottom-content">
-                <p>&copy; 2025 BMS Ventouse. Tous droits réservés.</p>
-            </div>
-        </div>
-    </div>
-</footer>
+{% include "footer.html" %}
