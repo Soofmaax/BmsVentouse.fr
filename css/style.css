@@ -1,6 +1,6 @@
 /* ==========================================================================
    Feuille de style pour BMS Ventouse
-   Version: 2.0 (Structure professionnelle)
+   Version: 2.1 (Améliorations : Typographie Fluide & Accessibilité)
    ========================================================================== */
 
 /* ==========================================================================
@@ -23,10 +23,10 @@
   --font-family-base: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --line-height-base: 1.6;
 
-  /* -- Espacements & Tailles -- */
-  --spacing-section: 80px;
-  --header-height: 70px;
-  --container-width: 1200px;
+  /* -- Espacements & Tailles (en rem pour l'accessibilité) -- */
+  --spacing-section: 5rem; /* 80px */
+  --header-height: 4.375rem; /* 70px */
+  --container-width: 75rem; /* 1200px */
 
   /* -- Autres -- */
   --border-radius-base: 8px;
@@ -72,7 +72,7 @@ a:hover {
 .container {
   max-width: var(--container-width);
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 1.25rem; /* 20px */
 }
 
 .section {
@@ -80,7 +80,8 @@ a:hover {
 }
 
 .section-title {
-  font-size: 2.5rem;
+  /* AMÉLIORATION : Typographie fluide */
+  font-size: clamp(2rem, 5vw + 1rem, 2.5rem);
   font-weight: 800;
   text-align: center;
   margin-bottom: 1rem;
@@ -92,7 +93,7 @@ a:hover {
   text-align: center;
   margin-bottom: 4rem;
   color: var(--color-text-muted);
-  max-width: 700px;
+  max-width: 43.75rem; /* 700px */
   margin-left: auto;
   margin-right: auto;
 }
@@ -289,13 +290,21 @@ a:hover {
 .hero {
   color: var(--color-light);
   text-align: center;
+  background-image: url('images/bms-ventouse-accueil-signaletique-rue-paris.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
 }
+
 .hero-overlay {
   padding: 150px 0 80px;
   margin-top: var(--header-height);
 }
+
 .hero h1 {
-  font-size: 3rem;
+  /* AMÉLIORATION : Typographie fluide */
+  font-size: clamp(2.2rem, 5vw + 1rem, 3rem);
   font-weight: 800;
   margin-bottom: 1.5rem;
   line-height: 1.2;
@@ -304,7 +313,7 @@ a:hover {
   font-size: 1.2rem;
   margin-bottom: 2.5rem;
   opacity: 0.9;
-  max-width: 700px;
+  max-width: 43.75rem; /* 700px */
   margin-left: auto;
   margin-right: auto;
 }
@@ -384,7 +393,7 @@ a:hover {
   margin-bottom: var(--spacing-section);
 }
 .case-study.reverse {
-  grid-template-columns: 1fr 1fr; /* Pour que l'image soit à droite */
+  grid-template-columns: 1fr 1fr;
 }
 .case-study.reverse .case-study-image { grid-column: 2; grid-row: 1; }
 .case-study.reverse .case-study-content { grid-column: 1; grid-row: 1; }
@@ -400,7 +409,8 @@ a:hover {
   margin-bottom: 1.5rem;
 }
 .case-study-content h3 {
-  font-size: 2rem;
+  /* AMÉLIORATION : Typographie fluide */
+  font-size: clamp(1.5rem, 4vw + 0.5rem, 2rem);
   font-weight: 800;
   margin-bottom: 1rem;
 }
@@ -458,11 +468,10 @@ a:hover {
    ========================================================================== */
 
 @media (max-width: 768px) {
-  .section-title { font-size: 2rem; }
-  .header .nav-links { display: none; } /* Sera géré par JS */
+  .header .nav-links { display: none; }
   .header .hamburger { display: flex; }
 
-  .hero h1 { font-size: 2.2rem; }
+  /* La typographie est maintenant fluide, moins de code nécessaire ici */
   .hero p { font-size: 1.1rem; }
 
   .footer-content, .footer-links { grid-template-columns: 1fr; }
@@ -477,4 +486,18 @@ a:hover {
   }
 }
 
+/* ==========================================================================
+   7. ACCESSIBILITÉ (NOUVELLE SECTION)
+   ========================================================================== */
 
+/* Amélioration de l'indicateur de focus pour la navigation au clavier */
+:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 3px;
+  border-radius: var(--border-radius-base);
+}
+
+/* Pour éviter d'afficher le style de focus lors d'un clic de souris */
+:focus:not(:focus-visible) {
+  outline: none;
+}
