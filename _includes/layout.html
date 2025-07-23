@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ==========================================================================
+       MÉTADONNÉES DYNAMIQUES
+       ========================================================================== -->
+    <!-- Ces valeurs seront remplies par les données en haut de chaque page (ex: index.html) -->
+    <title>{{ title }}</title>
+    <meta name="description" content="{{ description }}">
+    <link rel="canonical" href="{{ canonicalUrl }}">
+
+    <!-- ==========================================================================
+       ASSETS STATIQUES (CSS, FAVICONS)
+       ========================================================================== -->
+    <!-- Ces liens sont les mêmes pour toutes les pages. Les chemins commencent par "/"
+         car ils seront à la racine du site final généré dans `_site`. -->
+        
+    <!-- Favicons et Manifeste -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="shortcut icon" href="/favicon.ico">
+        
+    <!-- Feuille de style principale -->
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+    
+<!-- La classe du body sera aussi dynamique, pour permettre des styles spécifiques par page -->
+<body class="{{ bodyClass }}">
+
+    <!-- ==========================================================================
+       CONTENU DE LA PAGE
+       ========================================================================== -->
+    <!-- La balise `{{ content | safe }}` est un emplacement spécial où Eleventy
+         injectera le contenu unique de chaque page (index.html, contact.html, etc.).
+         Le filtre `| safe` est une sécurité pour s'assurer que le HTML est interprété correctement. -->
+        
+    {{ content | safe }}
+
+
+    <!-- ==========================================================================
+       SCRIPT JAVASCRIPT
+       ========================================================================== -->
+    <!-- Le script est chargé à la fin pour ne pas bloquer l'affichage de la page.
+         L'attribut `defer` améliore encore la performance. -->
+    <script src="/js/script.js" defer></script>
+
+</body>
+</html>
