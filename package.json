@@ -7,7 +7,6 @@
     "build": "eleventy"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.1",
-    "@11ty/eleventy-plugin-sitemap": "^1.0.0"
+    "@11ty/eleventy": "^2.0.1"
   }
 }
