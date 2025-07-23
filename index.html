@@ -6,9 +6,21 @@ bodyClass: page-accueil
 layout: layout.html
 ---
 
+<!--
+==========================================================================
+  FICHIER : index.html (Page d'accueil)
+  PROJET : BMS Ventouse
+  AUTEUR : [Votre Nom/Agence]
+  DESCRIPTION : Point d'entrée principal du site. Présente les services clés,
+                les témoignages et les appels à l'action.
+==========================================================================
+-->
 
 <!-- ==========================================================================
    EN-TÊTE (Injecté depuis _includes/header.html)
+   --------------------------------------------------------------------------
+   Le header est géré dans un fichier séparé pour la maintenabilité.
+   Il contient le logo, la navigation principale et le menu hamburger.
    ========================================================================== -->
 {% include "header.html" %}
 
@@ -17,10 +29,20 @@ layout: layout.html
    ========================================================================== -->
 <main>
 
-    <!-- SECTION HÉROS -->
-    <section class="hero" style="background: url('/images/hero-background.jpg') no-repeat center center/cover;">
-        <div class="hero-overlay" style="background: rgba(44, 62, 80, 0.7); padding: 150px 0 80px; margin-top: 70px;">
+    <!-- ==========================================================================
+       SECTION HÉROS (HERO)
+       --------------------------------------------------------------------------
+       Objectif : Capter l'attention immédiatement avec une proposition de
+                   valeur claire (UVP) et des appels à l'action (CTA) primaires.
+       Structure : L'image de fond et la superposition de couleur sont gérées
+                   via CSS pour une séparation claire des préoccupations (HTML/CSS).
+       ========================================================================== -->
+    <section class="hero">
+        <div class="hero-overlay">
             <div class="container" data-aos="fade-up">
+                <!-- Le <h1> est le titre le plus important de la page.
+                     Il doit être unique et contenir les mots-clés principaux.
+                     Crucial pour le SEO et l'accessibilité. -->
                 <h1>Votre Production, Notre Mission Logistique.</h1>
                 <p>De la sécurisation de zones sensibles au convoyage, nous assurons la fluidité de vos projets audiovisuels. Partout en France, 24h/24.</p>
                 <div class="hero-buttons">
@@ -31,51 +53,74 @@ layout: layout.html
         </div>
     </section>
 
-    <!-- SECTION SERVICES -->
-    <section id="services" class="section">
+    <!-- ==========================================================================
+       SECTION SERVICES
+       --------------------------------------------------------------------------
+       Objectif : Présenter les trois piliers de l'offre de BMS Ventouse.
+       Accessibilité : `aria-labelledby` lie sémantiquement le titre à sa
+                       section, aidant les lecteurs d'écran à naviguer.
+       Sémantique : La grille de services est une liste `<ul>`, car il s'agit
+                    d'une collection d'éléments de même nature.
+       ========================================================================== -->
+    <section id="services" class="section" aria-labelledby="services-title">
         <div class="container">
-            <h2 class="section-title" data-aos="fade-up">Une Solution pour Chaque Défi Logistique</h2>
+            <h2 id="services-title" class="section-title" data-aos="fade-up">Une Solution pour Chaque Défi Logistique</h2>
             <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Nous couvrons tous les aspects de la logistique de production pour vous permettre de vous concentrer sur la création.</p>
-            <div class="services-grid">
-                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+            
+            <ul class="services-grid">
+                <li class="service-card" data-aos="fade-up" data-aos-delay="200">
                     <div class="service-icon"><i class="fas fa-traffic-light"></i></div>
                     <h3>Ventousage & Réglementation</h3>
                     <p>Gestion complète des autorisations, pose de signalisation et neutralisation de stationnement, même dans les zones les plus complexes.</p>
-                </div>
-                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                </li>
+                <li class="service-card" data-aos="fade-up" data-aos-delay="300">
                     <div class="service-icon"><i class="fas fa-shield-alt"></i></div>
                     <h3>Sécurité & Gardiennage</h3>
                     <p>Protection de vos plateaux, de votre matériel et de vos équipes par des agents qualifiés, spécialisés dans le secteur audiovisuel.</p>
-                </div>
-                <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+                </li>
+                <li class="service-card" data-aos="fade-up" data-aos-delay="400">
                     <div class="service-icon"><i class="fas fa-truck-moving"></i></div>
                     <h3>Régie & Convoyage</h3>
                     <p>Mise à disposition d'équipes de régie, manutention et transport de véhicules ou de décors sur l'ensemble du territoire.</p>
-                </div>
-            </div>
+                </li>
+            </ul>
             <div style="text-align: center; margin-top: 50px;" data-aos="fade-up">
                 <a href="/services.html" class="btn btn-primary">Découvrir tous nos services</a>
             </div>
         </div>
     </section>
 
-    <!-- SECTION TÉMOIGNAGES -->
-    <section class="section" style="background-color: #f8f9fa;">
+    <!-- ==========================================================================
+       SECTION TÉMOIGNAGES
+       --------------------------------------------------------------------------
+       Objectif : Fournir une preuve sociale pour renforcer la crédibilité.
+       Sémantique : Utilisation de `<figure>`, `<blockquote>` et `<figcaption>`
+                    pour marquer correctement une citation et son auteur.
+                    C'est la meilleure pratique pour le SEO et l'accessibilité.
+       ========================================================================== -->
+    <section class="section" style="background-color: #f8f9fa;" aria-labelledby="testimonials-title">
         <div class="container">
-            <h2 class="section-title" data-aos="fade-up">Ils nous font confiance</h2>
+            <h2 id="testimonials-title" class="section-title" data-aos="fade-up">Ils nous font confiance</h2>
             <div class="testimonials-grid" style="display: grid; grid-template-columns: 1fr; gap: 40px; max-width: 800px; margin: 60px auto 0;">
-                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
-                    <p style="font-style: italic; font-size: 1.2rem; margin-bottom: 20px;">"L'équipe de BMS a été d'une efficacité redoutable sur le tournage de 'En Place'. Leur connaissance des zones sensibles est un atout inestimable."</p>
-                    <footer style="font-weight: 700;">— Jean Dupont, <span style="color: #FF8C42;">Directeur de Production (Netflix)</span></footer>
-                </div>
+                <figure class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+                    <blockquote cite="[URL de la source si elle existe]">
+                        <p>"L'équipe de BMS a été d'une efficacité redoutable sur le tournage de 'En Place'. Leur connaissance des zones sensibles est un atout inestimable."</p>
+                    </blockquote>
+                    <figcaption>— Jean Dupont, <cite>Directeur de Production (Netflix)</cite></figcaption>
+                </figure>
             </div>
         </div>
     </section>
 
-    <!-- SECTION RÉFÉRENCES -->
-    <section class="section">
+    <!-- ==========================================================================
+       SECTION RÉFÉRENCES
+       --------------------------------------------------------------------------
+       Objectif : Mettre en avant des collaborations prestigieuses pour
+                   asseoir l'autorité de la marque.
+       ========================================================================== -->
+    <section class="section" aria-labelledby="references-title">
         <div class="container">
-            <h2 class="section-title" data-aos="fade-up">Des Projets d'Envergure</h2>
+            <h2 id="references-title" class="section-title" data-aos="fade-up">Des Projets d'Envergure</h2>
             <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Nous sommes fiers d'avoir collaboré avec les plus grands noms de l'industrie sur des projets exigeants.</p>
             <div class="references-logos" style="display: flex; justify-content: center; align-items: center; gap: 40px; flex-wrap: wrap; margin-top: 40px;" data-aos="fade-up">
                 <span class="badge badge-netflix" style="font-size: 1.5rem;">NETFLIX</span>
@@ -88,20 +133,29 @@ layout: layout.html
         </div>
     </section>
 
-    <!-- SECTION APPEL À L'ACTION (CTA) -->
-    <section id="contact" class="section cta-section">
+    <!-- ==========================================================================
+       SECTION APPEL À L'ACTION (CTA - Call To Action)
+       --------------------------------------------------------------------------
+       Objectif : Convertir le visiteur en le guidant vers une action claire.
+       Sémantique : La balise `<aside>` est utilisée car le CTA est un contenu
+                    tangentiel, une sorte d'aparté pour inciter à l'action.
+       ========================================================================== -->
+    <aside id="contact" class="section cta-section" aria-labelledby="cta-title">
         <div class="container" data-aos="fade-up">
-            <h2 class="cta-title">Prêt à sécuriser votre prochaine production ?</h2>
+            <h2 id="cta-title" class="cta-title">Prêt à sécuriser votre prochaine production ?</h2>
             <p class="cta-subtitle">Contactez-nous dès aujourd'hui pour une analyse gratuite de vos besoins et un devis sur mesure.</p>
             <div class="hero-buttons">
                 <a href="tel:0646005642" class="btn btn-primary"><i class="fas fa-phone-alt"></i> Appel Direct</a>
                 <a href="/contact.html" class="btn btn-secondary"><i class="fas fa-envelope"></i> Envoyer un message</a>
             </div>
         </div>
-    </section>
+    </aside>
 </main>
 
 <!-- ==========================================================================
    PIED DE PAGE (Injecté depuis _includes/footer.html)
+   --------------------------------------------------------------------------
+   Le footer contient les liens de navigation secondaires, les informations
+   légales et les coordonnées. Géré dans un fichier séparé.
    ========================================================================== -->
 {% include "footer.html" %}
