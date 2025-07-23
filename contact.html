@@ -1,189 +1,86 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - BMS Ventouse</title>
-    <meta name="description" content="Contactez BMS Ventouse 24h/24 pour vos besoins en logistique audiovisuelle. Devis rapide et intervention sur toute la France.">
-    
-    <!-- URL Canonique : Indique à Google l'adresse officielle de cette page -->
-    <link rel="canonical" href="https://www.bmsventouse.fr/contact.html">
-    
-    <!-- Métadonnées pour le partage (Open Graph ) -->
-    <meta property="og:url" content="https://www.bmsventouse.fr/contact.html">
-    <meta property="og:title" content="Contact - BMS Ventouse">
-    <meta property="og:description" content="Contactez notre équipe technique pour vos besoins logistiques audiovisuels">
-    <meta property="og:type" content="website">
-    
-    <!-- Favicon complet -->
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="manifest" href="site.webmanifest">
-    <link rel="shortcut icon" href="favicon.ico">
+---
+title: Contactez BMS Ventouse - Devis et Urgences 24h/24
+description: Contactez notre équipe technique pour une étude gratuite de vos besoins en logistique audiovisuelle. Lignes directes ouvertes 24h/24 pour les urgences.
+canonicalUrl: https://www.bmsventouse.fr/contact.html
+bodyClass: page-contact
+layout: layout.html
+---
 
-    <!-- AMÉLIORATION PERFORMANCE : Pré-chargement de la feuille de style principale -->
-    <link rel="preload" href="style.css" as="style">
-    
-    <!-- Liaison vers la feuille de style externe -->
-    <link rel="stylesheet" href="style.css">
+<!-- ==========================================================================
+   EN-TÊTE (Composant réutilisable)
+   ========================================================================== -->
+{% include "header.html" %}
 
-    <!-- AMÉLIORATION SEO : Données structurées pour aider Google à comprendre le contenu -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "ProfessionalService",
-      "name": "BMS Ventouse",
-      "description": "Logistique technique audiovisuelle et sécurisation de zones sensibles pour les productions.",
-      "telephone": "+33646005642",
-      "email": "bms.ventouse@gmail.com",
-      "url": "https://www.bmsventouse.fr",
-      "logo": "https://www.bmsventouse.fr/android-chrome-192x192.png",
-      "areaServed": {
-        "@type": "Country",
-        "name": "France"
-      }
-    }
-    </script>
+<!-- ==========================================================================
+   CONTENU PRINCIPAL
+   ========================================================================== -->
+<main>
 
-</head>
-<body class="page-contact">
-
-    <!-- ==========================================================================
-       EN-TÊTE ET NAVIGATION PRINCIPALE
-       ========================================================================== -->
-    <header class="header">
-        <div class="container">
-            <div class="nav">
-                <a href="index.html" class="logo" aria-label="Retour à la page d'accueil de BMS Ventouse">
-                    <img src="android-chrome-192x192.png" alt="">
-                    <span class="logo-text">
-                        <span class="bms">BMS</span> <span class="ventouse">Ventouse</span>
-                    </span>
-                </a>
-                <nav class="nav-links">
-                    <a href="index.html" class="nav-link">Accueil</a>
-                    <a href="services.html" class="nav-link">Services</a>
-                    <a href="realisations.html" class="nav-link">Références</a>
-                    <a href="contact.html" class="nav-link active">Contact</a>
-                </nav>
-            </div>
-        </div>
-    </header>
-    <!-- /EN-TÊTE ET NAVIGATION PRINCIPALE -->
-
-    <main>
-
-        <!-- ==========================================================================
-           SECTION HÉROS
-           ========================================================================== -->
-        <section class="hero">
-            <div class="container">
-                <h1>Contactez notre équipe</h1>
+    <!-- SECTION HÉROS -->
+    <section class="hero" style="background: url('/images/contact-hero-background.jpg') no-repeat center center/cover;">
+        <div class="hero-overlay" style="background: rgba(44, 62, 80, 0.7); padding: 150px 0 80px; margin-top: 70px;">
+            <div class="container" data-aos="fade-up">
+                <h1>Contactez Notre Équipe</h1>
                 <p>Pour toute demande de devis, urgence ou planification, nos lignes sont ouvertes 24h/24.</p>
             </div>
-        </section>
-        <!-- /SECTION HÉROS -->
+        </div>
+    </section>
 
-        <!-- ==========================================================================
-           SECTION INFORMATIONS DE CONTACT
-           ========================================================================== -->
-        <section class="contact-info-section">
-            <div class="container">
-                <div class="contact-grid">
-                    <div class="contact-card">
-                        <div class="contact-icon" role="img" aria-label="Icône de téléphone">📞</div>
-                        <h3>Lignes Directes - Bena & Malik</h3>
-                        <div class="contact-number"><a href="tel:0646005642">06 46 00 56 42 (Bena )</a></div>
-                        <div class="contact-number"><a href="tel:0652473723">06 52 47 37 23 (Malik)</a></div>
-                        <p>Nos lignes sont ouvertes 24h/24 pour les urgences et la planification de vos projets.</p>
-                    </div>
-                    
-                    <div class="contact-card">
-                        <div class="contact-icon" role="img" aria-label="Icône d'email">✉️</div>
-                        <h3>Contact par Email</h3>
-                        <div class="contact-email"><a href="mailto:bms.ventouse@gmail.com">bms.ventouse@gmail.com</a></div>
-                        <p>Idéal pour les demandes de devis détaillés et l'envoi de documents. Réponse garantie sous 24h.</p>
-                    </div>
-                    
-                    <div class="contact-card">
-                        <div class="contact-icon" role="img" aria-label="Icône de camion">🚚</div>
-                        <h3>Prêts à intervenir</h3>
-                        <p><strong>Intervention sur toute la France</strong>, avec une expertise reconnue en Île-de-France et dans les grandes métropoles.</p>
-                        <p>Notre équipe qualifiée est mobile et s'adapte à vos lieux de tournage.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- /SECTION INFORMATIONS DE CONTACT -->
-
-        <!-- ==========================================================================
-           SECTION FOIRE AUX QUESTIONS (FAQ)
-           ========================================================================== -->
-        <section class="faq-section">
-            <div class="container">
-                <div class="faq-container">
-                    <h2 class="section-title">Questions Fréquentes</h2>
-                    
-                    <div class="faq-item">
-                        <button type="button" class="faq-question" aria-expanded="false">Quel est le délai d'intervention minimum ?</button>
-                        <div class="faq-answer">Pour les urgences, nous pouvons être opérationnels sous 24 heures. Pour une planification optimale, nous recommandons de nous contacter au moins 48 à 72 heures à l'avance.</div>
-                    </div>
-                    
-                    <div class="faq-item">
-                        <button type="button" class="faq-question" aria-expanded="false">Comment sont établis vos tarifs ?</button>
-                        <div class="faq-answer">Nos tarifs sont calculés sur mesure pour être les plus compétitifs. En cas de collaboration, certaines prestations comme la pose de panneaux peuvent être offertes. Consultez notre <a href="services.html">page services</a> pour plus de détails et contactez-nous pour un devis précis.</div>
-                    </div>
-                    
-                    <div class="faq-item">
-                        <button type="button" class="faq-question" aria-expanded="false">Intervenez-vous la nuit ou le weekend ?</button>
-                        <div class="faq-answer">Absolument. Nos équipes sont disponibles 24h/24 et 7j/7 pour s'adapter aux contraintes de vos plannings de production.</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- /SECTION FOIRE AUX QUESTIONS (FAQ) -->
-
-    </main>
-
-    <!-- ==========================================================================
-       PIED DE PAGE
-       ========================================================================== -->
-    <footer class="footer">
+    <!-- SECTION INFORMATIONS DE CONTACT -->
+    <section class="section contact-info-section">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Contact</h3>
-                    <p><a href="tel:0646005642">06 46 00 56 42 (Benamar)</a></p>
-                    <p><a href="tel:0652473723">06 52 47 37 23 (Malik)</a></p>
-                    <p><a href="mailto:bms.ventouse@gmail.com">bms.ventouse@gmail.com</a></p>
+            <div class="services-grid">
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-icon"><i class="fas fa-phone-volume"></i></div>
+                    <h3>Lignes Directes</h3>
+                    <p><strong><a href="tel:0646005642">06 46 00 56 42 (Bena)</a></strong></p>
+                    <p><strong><a href="tel:0652473723">06 52 47 37 23 (Malik)</a></strong></p>
+                    <p class="text-muted" style="margin-top: 15px;">Idéal pour les urgences et la planification de dernière minute.</p>
                 </div>
-                <div class="footer-section">
-                    <h3>Navigation</h3>
-                    <p><a href="services.html">Nos Services</a></p>
-                    <p><a href="realisations.html">Nos Références</a></p>
-                    <p><a href="contact.html">Nous Contacter</a></p>
+                
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-icon"><i class="fas fa-envelope-open-text"></i></div>
+                    <h3>Contact par Email</h3>
+                    <p><strong><a href="mailto:bms.ventouse@gmail.com">bms.ventouse@gmail.com</a></strong></p>
+                    <p class="text-muted" style="margin-top: 15px;">Parfait pour les demandes de devis détaillés et l'envoi de documents. Réponse sous 24h.</p>
                 </div>
-                <div class="footer-section">
+                
+                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-icon"><i class="fas fa-map-marked-alt"></i></div>
                     <h3>Zone d'Intervention</h3>
-                    <p><strong>FRANCE ENTIÈRE</strong></p>
-                    <p>Paris, Lyon, Bordeaux, Strasbourg</p>
+                    <p><strong>Intervention sur toute la France</strong>, avec une expertise reconnue en Île-de-France et dans les grandes métropoles.</p>
                 </div>
-                <div class="footer-section">
-                    <h3>Entreprise</h3>
-                    <p><a href="mentions.html">Mentions Légales</a></p>
-                    <p>SIRET: 93198138500015</p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 BMS Ventouse. Tous droits réservés.</p>
             </div>
         </div>
-    </footer>
-    <!-- /PIED DE PAGE -->
+    </section>
 
-    <!-- Liaison vers le script externe. 'defer' assure un chargement non-bloquant. -->
-    <script src="script.js" defer></script>
+    <!-- SECTION FOIRE AUX QUESTIONS (FAQ) -->
+    <section class="faq-section section" style="background-color: #f8f9fa;">
+        <div class="container">
+            <div class="faq-container" data-aos="fade-up">
+                <h2 class="section-title">Questions Fréquentes</h2>
+                
+                <div class="faq-item">
+                    <button type="button" class="faq-question" aria-expanded="false">Quel est le délai d'intervention minimum ?</button>
+                    <div class="faq-answer">Pour les urgences, nous pouvons être opérationnels sous 24 heures. Pour une planification optimale, nous recommandons de nous contacter au moins 48 à 72 heures à l'avance.</div>
+                </div>
+                
+                <div class="faq-item">
+                    <button type="button" class="faq-question" aria-expanded="false">Comment sont établis vos tarifs ?</button>
+                    <div class="faq-answer">Nos tarifs sont calculés sur mesure pour être les plus compétitifs. En cas de collaboration, certaines prestations comme la pose de panneaux peuvent être offertes. Consultez notre <a href="/services.html">page services</a> pour plus de détails et contactez-nous pour un devis précis.</div>
+                </div>
+                
+                <div class="faq-item">
+                    <button type="button" class="faq-question" aria-expanded="false">Intervenez-vous la nuit ou le weekend ?</button>
+                    <div class="faq-answer">Absolument. Nos équipes sont disponibles 24h/24 et 7j/7 pour s'adapter aux contraintes de vos plannings de production.</div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-</body>
-</html>
+</main>
+
+<!-- ==========================================================================
+   PIED DE PAGE (Composant réutilisable)
+   ========================================================================== -->
+{% include "footer.html" %}
