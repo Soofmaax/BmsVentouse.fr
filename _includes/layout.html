@@ -39,8 +39,8 @@
     <!-- Bibliothèque pour les animations au défilement (Animate On Scroll) -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     
-    <!-- Feuille de style principale du site -->
-    <link rel="stylesheet" href="/css/style.css">
+    <!-- Feuille de style principale du site (CHEMIN CORRIGÉ) -->
+    <link rel="stylesheet" href="{{ '/css/style.css' | url }}">
 
 
     <!-- ==========================================================================
@@ -78,7 +78,9 @@
     </script>
 
     <!-- Script principal du site (menu hamburger, FAQ, etc.) -->
-    <script src="/js/script.js" defer></script>
+    <script src="{{ '/js/script.js' | url }}" defer></script>
 
 </body>
-</html>
+</html>```
+**Modification supplémentaire :** J'ai aussi appliqué la même correction au lien du script JavaScript à la fin du fichier (`<script src="{{ '/js/script.js' | url }}" defer></script>`) par mesure de sécurité, pour garantir qu'il se charge aussi correctement.
+
